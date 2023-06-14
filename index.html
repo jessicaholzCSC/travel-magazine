@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Homepage
+banner:
+    heading: A whole new world.
+    description: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breathe.
 seo:
   title: 
   description:
@@ -9,6 +12,11 @@ seo:
   keywords:
   hide-from-google: false
 ---
+
+<!-------- Header ----------->
+
+    {% include hero-banner.html %}
+
 
 <!-- {{site.data.site-settings.global-cta-options}} -->
 <!------------------------ Featured blog loop ------------------------>
