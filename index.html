@@ -4,6 +4,15 @@ title: Homepage
 banner:
     heading: A whole new world.
     description: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breathe.
+text_blurbs:
+    heading: A fascinating heading about the site.
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit distinctio doloribus eum ipsam animi repellat, similique nemo tempora repellendus, asperiores quidem fugiat blanditiis commodi incidunt dicta aspernatur. Tempora, commodi totam?
+    button: 
+        text: Read more
+        url: "x"
+    image: 
+        image_path: /uploads/travel/travel-1.jpg
+        alt_text: A fascinating world
 seo:
   title: 
   description:
@@ -16,6 +25,16 @@ seo:
 <!-------- Header ----------->
 
     {% include hero-banner.html %}
+
+<!-----------About blurp ------------->
+
+<section>
+    <img src="{{ page.text_blurbs.image.image_path }}" 
+        alt="{{ page.text_blurbs.image.alt_text | default: page.text_blurbs.heading }}">
+    <h2> {{ page.text_blurbs.heading }} </h2>
+    <p> {{ page.text_blurbs.description }} </p>
+    <a href="{{ page.text_blurbs.button.url }} "> {{ page.text_blurbs.button.text }} </a>
+</section>
 
 
 <!-- {{site.data.site-settings.global-cta-options}} -->
