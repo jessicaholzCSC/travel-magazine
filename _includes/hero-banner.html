@@ -1,4 +1,6 @@
 <section>
-    <h1>{{page.banner.heading}}</h1>
-    <p>{{page.banner.description}}</p>
+    <img src="{{page.banner.image.image_path | default: page.featured_image }}" 
+    alt="{{page.banner.image.alt_text | default: page.banner.heading}}">
+    <h1>{{page.banner.heading | default: page.title }}</h1>
+    <p>{{page.banner.description | default: page.description }}</p>
 </section>

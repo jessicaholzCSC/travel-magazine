@@ -1,6 +1,6 @@
 ---
 layout: modular-post
-title: Dans random trip
+title: Dans Random Trip
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum,
   ab, eum dolore perspiciatis tenetur alias aspernatur

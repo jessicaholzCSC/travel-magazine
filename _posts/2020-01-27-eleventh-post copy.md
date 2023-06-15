@@ -1,6 +1,6 @@
 ---
 layout: post-with-sidebar
-title: My eleventh post 
+title: Eleventh post
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum, ab, eum dolore perspiciatis tenetur alias aspernatur
 author: Catherine
 featured: true
