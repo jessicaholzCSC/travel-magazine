@@ -33,7 +33,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Figtree, sans-serif; /* 4 */
+  font-family: Montserrat, sans-serif; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
 }
@@ -998,6 +998,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
 }
+.bg-\[\#d5d1cd\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(213 209 205 / var(--tw-bg-opacity));
+}
 .bg-dark {
   background-color: rgb(63 63 70);;
 }
@@ -1083,7 +1087,7 @@ video {
   text-align: center;
 }
 .font-serif {
-  font-family: Playfair Display, serif;
+  font-family: Italiana, serif;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1120,6 +1124,9 @@ video {
 }
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 .text-light {
   color: rgb(244 244 245);;
@@ -1251,9 +1258,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
