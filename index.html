@@ -2,24 +2,24 @@
 layout: default
 title: Homepage
 banner:
-    heading: A whole new world.
-    description: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breathe.
+    heading: A whole <br> new world.
+    description: Surfing teaches you to appreciate the <br> finer things in life, to be present, live <br> in the moment and just breathe.
     image: 
-        image_path: /uploads/travel/travel-1.jpg
+        image_path: /uploads/magazine/blog-bg-12.jpg
         alt_text: A fascinating world
 text_blurbs:
-    heading: A fascinating heading about the site.
-    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit distinctio doloribus eum ipsam animi repellat, similique nemo tempora repellendus, asperiores quidem fugiat blanditiis commodi incidunt dicta aspernatur. Tempora, commodi totam?
+    heading: A fascinating <br> heading about <br> the site.
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit distinctio doloribus eum ipsam animi repellat, similique nemo tempora repellendus, asperiores quidem fugiat blanditiis commodi incidunt dicta aspernatur. Tempora, commodi totam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit distinctio doloribus eum ipsam animi repellat, similique nemo tempora repellendus, asperiores quidem fugiat blanditiis commodi incidunt dicta aspernatur. Tempora, commodi totam?
     button: 
         text: Read more
         url: "x"
     image: 
-        image_path: /uploads/travel/travel-1.jpg
+        image_path: /uploads/magazine/blog-bg-13.jpg
         alt_text: A fascinating world
 itinerary:
     heading: Upcoming Travel Destinations
     image:
-        image_path: /uploads/travel/travel-1.jpg
+        image_path: /uploads/magazine/blog-bg-14.jpg
         alt_text: Placeholder for alt 
         overlay_text: Currently in.....
     destinations:
@@ -50,36 +50,40 @@ seo:
 
 <!-----------About blurp ------------->
 
-<section>
-  <img src="{{ page.text_blurbs.image.image_path }}" alt="{{ page.text_blurbs.image.alt_text | default: page.text_blurbs.heading }}">
-  <h2>
-    {{ page.text_blurbs.heading }}
-  </h2>
-  <p>
-    {{ page.text_blurbs.description }}
-  </p>
-  <a href="{{ page.text_blurbs.button.url }} ">
-    {{ page.text_blurbs.button.text }}
-  </a>
+<section class="grid sm:grid-cols-2 p-[5rem] bg-[#edeceb]">
+  <div class="sm:w-[85%] pb-[50%] sm:min-h-70 bg-cover bg-center bg-[url('{{page.text_blurbs.image.image_path | default: page.featured_image}}')]"> </div>
+  <div class="py-15p">
+    <h2 class="font-serif text-[3rem] sm:w-[30rem] sm:-ml-[20vw] leading-[1.07] sm:text-center py-3 mb-8 sm:bg-[#d5d1cd]">
+      {{ page.text_blurbs.heading }}
+    </h2>
+    <!-- need to put text in block -->
+    <p class="text-sm leading-[1.8] pb-[1.5rem]"> 
+      {{ page.text_blurbs.description }} 
+    </p>
+    <a class="underline uppercase font-serif text-lg" href="{{ page.text_blurbs.button.url }} ">
+      {{ page.text_blurbs.button.text }}
+    </a>
+  </div>
 </section>
 
 
 <!------------ Travel Destination | itinerary ----------->
 
-<section>
-  <h2>{{ page.itinerary.heading }}</h2>
-  <ul>
-    {% for item in page.itinerary.destinations %}
-      <li>
-        <div>{{ item.location }}</div>
-        <div>{{ item.date }}</div>
-      </li>
-    {% endfor %}
-  </ul>
+<section class="py-[3rem]">
+  <h2 class="uppercase font-serif text-3xl text-center tracking-wide p-10">{{ page.itinerary.heading }}</h2>
+  <div class="grid sm:grid-cols-2 gap-5"> 
+    <ul class="pl-[5rem]">
+      {% for item in page.itinerary.destinations %}
+        <li>
+          <div>{{ item.location }}</div>
+          <div>{{ item.date }}</div>
+        </li>
+      {% endfor %}
+    </ul>
 
-  <div>
-    <img src="{{ page.itinerary.image.image_path }}" alt="{{ page.itinerary.image.alt | default: page.itinerary.heading }}">
-    <div>{{ page.itinerary.image.overlay_text }}</div>
+    <div class="relative sm:w-[85%] pb-[50%] sm:min-h-70 bg-cover bg-center bg-[url('{{page.itinerary.image.image_path | default: page.featured_image}}')]">
+      <div class="absolute font-serif text-[3rem] sm:bg-[#d5d1cd] inline-block p-1 px-4 bottom-8">{{ page.itinerary.image.overlay_text }}</div>
+    </div>
   </div>
 </section>
 
@@ -102,7 +106,7 @@ seo:
 
         <!-- Background image -->
         <div class="bg-cover 
-                                                        {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %}" style="background-image:url( '{{ post.featured_image }}' );"></div>
+             {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %}" style="background-image:url( '{{ post.featured_image }}' );"></div>
 
         <!-- Text container  -->
         <div class="p-4 relative -top-4 left-4 bg-white">
