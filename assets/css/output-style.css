@@ -816,6 +816,9 @@ video {
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
 }
+.pointer-events-none {
+  pointer-events: none;
+}
 .fixed {
   position: fixed;
 }
@@ -990,6 +993,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-1\/2 {
+  width: 50%;
+}
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -1020,6 +1026,9 @@ video {
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .flex-nowrap {
   flex-wrap: nowrap;
@@ -1125,6 +1134,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(231 229 228 / var(--tw-bg-opacity));
 }
+.bg-stone-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+}
 .bg-\[url\(\'\/uploads\/magazine\/blog-bg-12\.jpg\'\)\] {
   background-image: url('/uploads/magazine/blog-bg-12.jpg');
 }
@@ -1143,12 +1156,22 @@ video {
 .bg-cover {
   background-size: cover;
 }
+.bg-\[length\:50vw\] {
+  background-size: 50vw;
+}
 .bg-center {
   background-position: center;
+}
+.bg-left {
+  background-position: left;
 }
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 .p-1 {
   padding: 0.25rem;
@@ -1172,6 +1195,9 @@ video {
   padding: 2rem;
 }
 .p-\[5rem\] {
+  padding: 5rem;
+}
+.p-20 {
   padding: 5rem;
 }
 .px-4 {
