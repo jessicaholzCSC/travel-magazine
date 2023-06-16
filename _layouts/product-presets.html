@@ -4,12 +4,12 @@ layout: default
 
 <!-- Section I / Product Intro -->
 
-<section class="grid grid-cols-2">
+<section class="grid grid-cols-2 items-end bg-stone-200 py-2">
     <div class="col-span-1 p-20">
         <h1 class="font-serif text-[3rem] mb-2"> {{page.title}} </h1>
         <h2 class="uppercase font-sans-serif mb-2"> {{page.subtitle}} </h2>
-        <p> {{page.description}} </p>
-        <a class="bg-black p-2 text-white uppercase" href="#"> Buy now </a>
+        <p class="mb-5"> {{page.description}} </p>
+        <a class="bg-black py-3 px-5 text-white uppercase" href="#"> Buy now </a>
     </div>
     <div class="col-span-1">
     <img class="aspect-square object-cover" src="{{page.featured-image}}" alt="desert">
@@ -18,7 +18,7 @@ layout: default
 
 <!-- Section II / Before & After -->
 
-<section class="bg-stone-100 p-5p">
+<section class="">
     <div class="grid grid-cols-5 max-w-screen-xl mx-auto">
         <div class="col-span-3 p-8">
 
@@ -26,7 +26,7 @@ layout: default
 
         </div>
         <div class="col-span-2 p-8 self-center">
-            <h2 class="text-2xl uppercase"> Before & After </h2>
+            <h2 class="text-2xl font-serif mb-8 text-[2rem] uppercase"> Before & After </h2>
             {{site.data.preset-settings.before-and-after-description_html}}
         </div>
 
@@ -40,8 +40,8 @@ layout: default
     <div class="grid sm:grid-cols-6 max-w-screen-xl mx-auto">
 
         <div class="col-span-2 p-8 self-center">
-            <h2 class="text-2xl uppercase"> {{site.data.preset-settings.instructions.heading}} </h2>
-            <ul> {{site.data.preset-settings.instructions.description}} </ul>
+            <h2 class="text-2xl font-serif mb-8 text-[2rem] uppercase"> {{site.data.preset-settings.instructions.heading}} </h2>
+            <ul class="leading-[1.8]"> {{site.data.preset-settings.instructions.description_html}} </ul>
             {{site.data.preset-settings.instructions_html}}
         </div>
         <div class="p-8 col-span-4">
@@ -54,14 +54,21 @@ layout: default
 
 
 <!-- FAQ -->
-<section>
-    <h2>FAQ's</h2>
-    <div class="flex justify-between">
+<section class="px-5p py-4">
+    <h2 class="border-b-2 border-black text-2xl font-serif pb-8 text-[2rem] uppercase">FAQ's</h2>
         {% for item in site.data.preset-settings.faq %}
-        <h3>{{item.question}}</h3>
-        <p>{{item.answer}}</p>
+        <div class="border-b-2 border-black py-3" x-data="{ open: false }">
+            <button class="flex w-full justify-between" @click="open = ! open">
+                <h3 class="uppercase font-sans-serif">{{item.question}}</h3>
+                <span>
+                 <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+                 <svg x-show="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </button>
+            <div x-show="open" @click.outside="open = false"><p class="pb-3">{{item.answer}}</p></div>
+        </div>
+        
         {% endfor %}
-    </div>
 </section>
 
 <!-- Related -->

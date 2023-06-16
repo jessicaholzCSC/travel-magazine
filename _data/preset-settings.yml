@@ -1,14 +1,23 @@
 instructions:
   heading: How to use your presets
-  description: lorem Ipsum aute do minim nulla est ipsum anim qui laboris nostrud.Adipisicing magna consectetur in nisi aute sint occaecat et non deserunt. Aliqua est ipsum dolore duis sunt. Mollit Lorem aliquip ad duis minim excepteur elit minim do eiusmod quis. lorem Ipsum aute do minim nulla est ipsum anim qui laboris nostrud.Adipisicing magna consectetur in nisi aute sint occaecat et non deserunt. Aliqua est ipsum dolore duis sunt. Mollit Lorem aliquip ad duis minim excepteur elit minim do eiusmod quis.
+  description_html: >-
+    - lorem Ipsum aute do minim nulla est <br>
+    - laboris nostrud.Adipisicing magna <br>
+    - n nisi aute sint occaecat et non <br> 
+    - psum dolore duis sunt. Mollit Lorem <br> 
+    - duis minim excepteur elit minim do <br>
+    - orem Ipsum aute do minim nulla est <br>
+    - ipsum anim qui laboris nostrud <br>
+    - Adipisicing magna consectetur <br>
+    - n nisi aute sint occaecat et non <br> 
   presets-instructions-vimeo-id: 663318015
 before-and-after-description_html: lorem Ipsum aute do minim nulla est ipsum anim qui laboris nostrud.Adipisicing magna consectetur in nisi aute sint occaecat et non deserunt. Aliqua est ipsum dolore duis sunt. Mollit Lorem aliquip ad duis minim excepteur elit minim do eiusmod quis. lorem Ipsum aute do minim nulla est ipsum anim qui laboris nostrud.Adipisicing magna consectetur in nisi aute sint occaecat et non deserunt. Aliqua est ipsum dolore duis sunt. Mollit Lorem aliquip ad duis minim excepteur elit minim do eiusmod quis.
 faq:
-  - question: This is a question
-    answer: This can be an answer for the question above. But we still don't know.
-  - question: This is a question
-    answer: This can be an answer for the question above. But we still don't know.
-  - question: This is a question
-    answer: This can be an answer for the question above. But we still don't know.
-  - question: This is a question
-    answer: This can be an answer for the question above. But we still don't know.
+  - question: Frequently asked question 1
+    answer: Dolor ipsum ullamco amet officia dolore enim. Commodo duis ut laborum ipsum irure enim sunt ex nisi do aute id sint reprehenderit. Ullamco id nisi sit consequat ut aute labore sit labore eu. Amet veniam elit pariatur veniam do aute non. Ullamco commodo sit ex adipisicing eu incididunt ex consectetur minim in adipisicing ea esse. Elit incididunt exercitation do officia occaecat ipsum quis.
+  - question: Frequently asked question 2
+    answer: Dolor ipsum ullamco amet officia dolore enim. Commodo duis ut laborum ipsum irure enim sunt ex nisi do aute id sint reprehenderit. Ullamco id nisi sit consequat ut aute labore sit labore eu. Amet veniam elit pariatur veniam do aute non. Ullamco commodo sit ex adipisicing eu incididunt ex consectetur minim in adipisicing ea esse. Elit incididunt exercitation do officia occaecat ipsum quis.
+  - question: Frequently asked question 3
+    answer: Dolor ipsum ullamco amet officia dolore enim. Commodo duis ut laborum ipsum irure enim sunt ex nisi do aute id sint reprehenderit. Ullamco id nisi sit consequat ut aute labore sit labore eu. Amet veniam elit pariatur veniam do aute non. Ullamco commodo sit ex adipisicing eu incididunt ex consectetur minim in adipisicing ea esse. Elit incididunt exercitation do officia occaecat ipsum quis.
+  - question: Frequently asked question 4
+    answer: Dolor ipsum ullamco amet officia dolore enim. Commodo duis ut laborum ipsum irure enim sunt ex nisi do aute id sint reprehenderit. Ullamco id nisi sit consequat ut aute labore sit labore eu. Amet veniam elit pariatur veniam do aute non. Ullamco commodo sit ex adipisicing eu incididunt ex consectetur minim in adipisicing ea esse. Elit incididunt exercitation do officia occaecat ipsum quis.
