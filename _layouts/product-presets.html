@@ -21,15 +21,15 @@ layout: default
 
 <section class="grid grid-cols-3">
     <div class="col-span-2">
-        <div style="background-image: url('{{page.featured-image}}');" class="min-h-70"> 
-        </div>
+        <div style="background-image: url('{{page.featured-image}}');" class="col-span-1 aspect-square"> </div>
+
         <div class="grid grid-cols-6">
-            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
-            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
-            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
-            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
-            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
-            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
+            <div style="background-image: url('{{page.featured-image}}');" class="col-span-1 aspect-square"></div>
+            <div style="background-image: url('{{page.featured-image}}');" class="col-span-1 aspect-square"></div>
+            <div style="background-image: url('{{page.featured-image}}');" class="col-span-1 aspect-square"></div>
+            <div style="background-image: url('{{page.featured-image}}');" class="col-span-1 aspect-square"></div>
+            <div style="background-image: url('{{page.featured-image}}');" class="col-span-1 aspect-square"></div>
+            <div style="background-image: url('{{page.featured-image}}');" class="col-span-1 aspect-square"></div>
         </div>
     </div>
     <div class="col-span-1">
@@ -39,8 +39,28 @@ layout: default
     
 </section>
 
-<!--  How to  -->
-<section class=""
+<!--  How to section -->
+<section class="grid grid-cols-3">
+    <div class="col-span-1">
+        <h2> {{site.data.preset-settings.instructions.heading}} </h2>
+        <ul> {{site.data.preset-settings.instructions.description}} </ul>
+    </div>
+    <div class="col-span-2"> {{site.data.preset-settings.instructions.video}} </div>
+</section>
+
+<!-- FAQ -->
+<section>
+    <h2>FAQ's</h2>
+    <div class="flex justify-between">
+        {% for item in site.data.preset-settings.faq %}
+        <h3>{{item.question}}</h3>
+        <p>{{item.answer}}</p>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Related -->
+
 
 
 <!-- 
