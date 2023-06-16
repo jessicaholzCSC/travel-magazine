@@ -1,0 +1,31 @@
+<section class="bg-zinc-100 p-5p related-posts">
+    <div class="max-w-screen-xl mx-auto">
+  
+      <h4 class="text-center font-serif text-2xl mb-4"> Related Products </h4>
+      
+      <div class="grid grid-cols-3 align-items-center">
+      
+  
+      {% assign relevant-products = site.products-presets | where_exp:"product","product.url != page.url" %}
+  
+      {% for product in relevant-products limit:3 %}
+
+      <a class="p-2 block mb-4" href="{{ product.url }}">
+        <div class="bg-cover aspect-square" style="background-image:url( '{{ product.featured-image }}' );"></div>
+        <div class="p-4 relative bg-white">
+            
+            <h2 class="mt-1 font-serif text-3xl"> {{ product.title }} </h2>
+            <hr class="border-rose-600 w-10 border-t-2 mt-4 mb-2"> 
+            <p>{{ product.description }}</p>
+
+        </div>
+    </a>
+      
+  {% endfor %}
+</div>
+      
+  </section>
+
+
+
+  
