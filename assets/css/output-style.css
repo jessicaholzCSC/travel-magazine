@@ -957,6 +957,15 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-80 {
+  min-height: 80vh;
+}
+.min-h-100 {
+  min-height: 100vh;
+}
+.min-h-70 {
+  min-height: 70vh;
+}
 .w-0 {
   width: 0px;
 }
@@ -985,11 +994,17 @@ video {
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 .flex-nowrap {
   flex-wrap: nowrap;
@@ -1086,6 +1101,9 @@ video {
 }
 .bg-\[url\(\'\/uploads\/travel\/travel-2\.jpg\'\)\] {
   background-image: url('/uploads/travel/travel-2.jpg');
+}
+.bg-\[url\(\'\{\{page\.featured-image\}\}\'\)\] {
+  background-image: url('{{page.featured-image}}');
 }
 .bg-cover {
   background-size: cover;

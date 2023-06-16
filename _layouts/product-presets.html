@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+<!-- Section I / Product Intro -->
+
+<section class="grid grid-cols-2">
+    <div class="col-span-1 p-10">
+        <h1> {{page.title}} </h1>
+        <h2> {{page.subtitle}} </h2>
+        <p> {{page.description}} </p>
+        <a href="#"> Buy now </a>
+    </div>
+    <div class="col-span-1">
+    <img class="p-10" src="{{page.featured-image}}" alt="desert">
+    </div>
+</section>
+
+
+<!-- Section II / Before & After -->
+
+<section class="grid grid-cols-3">
+    <div class="col-span-2">
+        <div style="background-image: url('{{page.featured-image}}');" class="min-h-70"> 
+        </div>
+        <div class="grid grid-cols-6">
+            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
+            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
+            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
+            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
+            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
+            <div class="col-span-1 aspect-square bg-[url('{{page.featured-image}}')]"></div>
+        </div>
+    </div>
+    <div class="col-span-1">
+        <h2> Before & after </h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dicta in obcaecati impedit perspiciatis vitae explicabo, eveniet maxime ipsa earum expedita nobis recusandae consectetur nam tempora? Facere possimus corrupti vel.</p>
+    </div>
+    
+</section>
+
+<!--  How to  -->
+<section class=""
+
+
+<!-- 
+
+    Section I
+    2 col grid, one image
+    creating a collection of presets, each product has a front matter with the details (compare it with how you set up the blog posts)
+    h1 Product Name 
+    h2 or paragraph
+    buy button from shopify (code for it comes to the front matter as well)
+
+    Section II / Before & After
+    3 col grid 
+    before / after slider is taken up col-span-2 
+    inside of the grid we have 6-cols-grid for the images below
+    col-span-1 for:
+     h2 "before & after"
+     paragraph
+     information for the images, h2 and p, we put it in the front matter
+
+    Section III / How to use
+    3 col grid 
+    before / after slider is taken up col-span-2 
+    col-span-1 for:
+     h2 "before & after"
+     paragraph
+     information video, h2 and p, we put it in a data file
+
+    Section IV / FAQ
+    information for faq goes into preset data file
+    "FAQ" is h2
+    each question is h3
+    you need to use a for-loop (this is efficient when the client adds more questions/content that it gets added automatically)
+
+    Section V / Related Posts
+    creating a preset collection
+    using a loop to output the items in a collection
+    the whole item is a link 
+    h3, p and link are in the front matter
+
+ -->
+
