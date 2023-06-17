@@ -1,6 +1,6 @@
-<section class="min-h-screen p-5p flex items-center">
-        <div class="absolute bg-cover bg-center bottom-0 left-[20%] h-full w-[80%] -z-10 bg-[url('{{page.banner.image.image_path | default: page.featured_image}}')]"></div>
-        <div class="">
+<section class="min-h-screen flex items-center">
+        <div class="absolute aspect-landscape h-full w-[100%] -z-10 bg-[url('{{page.banner.image.image_path | default: page.featured_image}}')]"></div>
+        <div class=" p-5p">
             <h1 class="font-serif text-white text-[9vw] leading-tight mb-[3rem]">{{page.banner.heading | default: page.title }}</h1>
             <p class="font-sans-serif text-white uppercase tracking-widest">{{page.banner.description | default: page.description }}</p>
             
