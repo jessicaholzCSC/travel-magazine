@@ -6,8 +6,6 @@
       <div class="grid grid-cols-3 align-items-center">
       
   
-      {% assign relevant-products = site.products-presets | where_exp:"product","product.url != page.url" %}
-  
       {% for product in relevant-products limit:3 %}
 
       <a class="p-2 block mb-4" href="{{ product.url }}">

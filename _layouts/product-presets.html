@@ -73,7 +73,9 @@ layout: default
 
 <!-- Related -->
 
-{% include related-products.html %}
+{% assign relevant-products = site.products-presets | where_exp:"product","product.url != page.url" %}
+
+{% include related-products.html relevant-products=relevant-products %}
 
 <!-- 
 

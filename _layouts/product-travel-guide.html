@@ -55,9 +55,21 @@ layout: default
             {% endfor %}
     </div>
     <div class="grid col-span-2 pl-4">
-        <h2 class="text-2xl font-serif mb-8 text-[2rem] uppercase"> What's included </h2>
-            <ul class="leading-[1.8]"> {{site.data.guide-settings.instructions.description_html}} </ul>
-            {{site.data.guide-settings.instructions_html}}
+        <h2 class="text-4xl font-serif mb-8 text-[2rem] uppercase"> What's included </h2>
+            <ul class="leading-[1.8] mb-8"> 
+                <li> - Tipps for sightseeing </li>
+                <li> - Recommendations </li>
+                <li> - Best Cafes </li>
+                <li> - Best Restaurants </li>
+                <li> - Maps </li>
+                <li> - Beaches </li>
+                <li> - Where to go </li>
+            </ul>
+            <div>
+                <a class="uppercase bg-black p-1 text-white p-2" href="#"> Add to cart </a>
+                <a class="ml-4" href="#"> Add to wishlist </a>
+            </div>
+            
 
     </div>
     
@@ -65,4 +77,6 @@ layout: default
 
 <!-- Related -->
 
-{% include related-products.html %}
+{% assign relevant-products = site.products-guides | where_exp:"product","product.url != page.url" %}
+
+{% include related-products.html relevant-products=relevant-products %}
