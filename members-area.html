@@ -9,11 +9,14 @@ banner:
         alt_text: A man walking through the desert
 members-content: 
  - title: This is a title
-   content_html: some content 
+   content_html: Sunt ex ipsum ad deserunt Lorem incididunt eu cupidatat tempor in veniam velit irure ullamco. Pariatur ut aliquip incididunt enim mollit ut amet dolor veniam ullamco amet aliqua. Nulla cupidatat esse sint ea do. 
+   image: /uploads/magazine/blog-bg-7.jpg
  - title: This is a second title 
-   content_html: some content 
+   content_html: Sunt ex ipsum ad deserunt Lorem incididunt eu cupidatat tempor in veniam velit irure ullamco. Pariatur ut aliquip incididunt enim mollit ut amet dolor veniam ullamco amet aliqua. Nulla cupidatat esse sint ea do.  
+   image: /uploads/magazine/blog-bg-10.jpg
  - title: This is a third title 
-   content_html: some content
+   content_html: Sunt ex ipsum ad deserunt Lorem incididunt eu cupidatat tempor in veniam velit irure ullamco. Pariatur ut aliquip incididunt enim mollit ut amet dolor veniam ullamco amet aliqua. Nulla cupidatat esse sint ea do. 
+   image: /uploads/magazine/blog-bg-9.jpg
 seo:
   title: 
   description:
@@ -28,33 +31,38 @@ seo:
 <section class="min-h-50 flex items-center">
     <div class="absolute aspect-landscape h-full w-[100%] -z-10 bg-[url('{{page.banner.image.image_path | default: page.featured_image}}')]"></div>
     <div class=" p-5p">
-        <h1 class="font-serif text-white text-[9vw] leading-tight mb-[3rem]">{{page.banner.heading | default: page.title }}</h1>
-        <p class="font-sans-serif text-white tracking-widest">{{page.banner.description | default: page.description }}</p>
+        <h1 class="font-serif text-white text-[9vw] leading-tight mb-[1rem]">{{page.banner.heading | default: page.title }}</h1>
+        <p class="font-sans-serif text-white tracking-widest text-lg ml-2">{{page.banner.description | default: page.description }}</p>
         
-        {{% if page.banner.button.url and page.banner.button.text %}}
+        {% if page.banner.button.url and page.banner.button.text %}
         <a href="{{page.banner.button.url}}" >{{page.banner.button.text}}</a>
-        {{% endif %}}
+        {% endif %}
     </div>
 </section>
 
 
+<!-- Content Section -->
 
+<section class="min-h-80 grid grid-cols-4 bg-[#edeceb]">
 
-<section class="min-h-80 p-5p grid grid-cols-4">
-
-    <div class="col-span-1">
+    <div class="col-span-1 flex flex-col pt-10 items-center">
+        <div>
             <h2 class="text-2xl font-serif mb-8 text-[2rem] uppercase"> Explore </h2>
             {% for item in page.members-content %}
-            <a href="#{{item.title | slugify }}" class="block text-sm font-sans-serif leading-[1.8]"> {{item.title}}</a>
+            <a href="#{{item.title | slugify }}" class="block text-sm font-normal font-sans-serif leading-[1.8]"> {{item.title}}</a>
             {% endfor %}
-
+        </div>
     </div> 
 
     <div class="col-span-3">
 
         {% for item in page.members-content %}
-        <div id="{{item.title | slugify}}" class="p-5p border-b-2"> 
-            {{ item.content_html }}
+        <div id="{{item.title | slugify}}" class="p-5p border-b-2 border-l-2 border-black"> 
+            <div> 
+                <img class="h-[50vh] w-full mb-10 aspect-landscape bg-cover" src="{{item.image}}">
+            </div>
+            <h2 class="text-4xl font-serif mb-8 text-[2rem] uppercase"> {{ item.title }} </h2>
+            <p class="font-sans-serif mb-8"> {{ item.content_html }} </p>
         </div>
 
         {% endfor %}
