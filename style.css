@@ -56,11 +56,13 @@ body {
  /* Forgot Email / forgot password text */
  #memberspace-login-form .MemberSpaceWidgetInternal__InputWrapper_labelRight {
      color: green;
+     @apply text-green-500;
  }
  
  
  #memberspace-login-form .MemberSpaceWidgetInternal__Button_variant-primary {
      color: red;
+     @apply text-red-600;
  }
  
  #memberspace-login-form .MemberSpaceWidgetInternal__Button_variant-secondary {

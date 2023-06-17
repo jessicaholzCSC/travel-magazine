@@ -60,16 +60,16 @@ seo:
     <p class="text-sm leading-[1.8] pb-[1.5rem]"> 
       {{ page.text_blurbs.description }} 
     </p>
-    <a class="underline uppercase font-serif text-lg" href="{{ page.text_blurbs.button.url }} ">
+    <a class="underline uppercase font-serif text-xl tracking-wide" href="{{ page.text_blurbs.button.url }} ">
       {{ page.text_blurbs.button.text }}
     </a>
   </div>
 </section>
 
 
-<!------------ Travel Destination | itinerary ----------->
+<!------------ Travel Destination | itinerary | own code for reference ----------->
 
-<section class="py-[3rem]">
+<!-- <section class="py-[3rem]">
   <h2 class="uppercase font-serif text-3xl text-center tracking-wide p-10">{{ page.itinerary.heading }}</h2>
   <div class="grid sm:grid-cols-2 gap-5"> 
     <ul class="pl-[5rem]">
@@ -85,14 +85,48 @@ seo:
       <div class="absolute font-serif text-[3rem] sm:bg-[#d5d1cd] inline-block p-1 px-4 bottom-8">{{ page.itinerary.image.overlay_text }}</div>
     </div>
   </div>
+</section> -->
+
+
+<!-- Tinas code for travel destinations -->
+
+<section class="p-5p grid grid-cols-5 gap-5">
+
+  <div class="col-span-full">
+    <h2 class="text-4xl uppercase text-center mb-8 font-serif tracking-wider"> Upcoming Travel Destinations </h2>
+  </div>
+
+  <div class="col-span-3 pr-10 pt-[6rem] pl-[0.5rem]">
+
+    <hr class="border border-zinc-800 border-b-0">
+
+    {% for item in page.itinerary.destinations %}
+
+    <div class="flex justify-between">
+      <p class="my-6 tracking-wide uppercase"> {{item.location}} </p>
+      <p class="my-6"> {{item.date}} </p>
+    </div>
+    
+    <hr class="border border-zinc-800 border-b-0">
+
+    {% endfor %}
+  </div>
+  
+  <div class="col-span-2 sm:min-h-60 bg-cover bg-center py-8 flex items-end" 
+      style="background-image: url('{{page.itinerary.image.image_path}}')">
+      <h2 class="font-serif text-[3rem] sm:bg-[#d5d1cd] p-4 text-3xl"> Currently in... </h2>
+  </div>
 </section>
+
+
+
 
 
 
 <!-- {{site.data.site-settings.global-cta-options}} -->
 <!------------------------ Featured blog loop ------------------------>
-<section class="p-5p">
-  <h2>
+<section class="p-5p bg-[#edeceb]">
+  <h2 class="text-4xl uppercase text-center mb-8 font-serif tracking-wider">
     {{ page.blog.heading }}
   </h2>
   <div class="max-w-screen-xl mx-auto md:columns-3">
@@ -105,8 +139,8 @@ seo:
       <a class="post-item p-2 break-inside-avoid block mb-4" href="{{ post.url }}">
 
         <!-- Background image -->
-        <div class="bg-cover 
-             {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %}" style="background-image:url( '{{ post.featured_image }}' );"></div>
+        <div class="inset-0 w-full h-full object-cover 
+             {% cycle 'aspect-square', 'aspect-landscape' %}" style="background-image:url( '{{ post.featured_image }}' );"></div>
 
         <!-- Text container  -->
         <div class="p-4 relative -top-4 left-4 bg-white">
@@ -124,3 +158,4 @@ seo:
   </div>
 
 </section>
+
