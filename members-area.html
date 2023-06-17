@@ -43,9 +43,9 @@ seo:
 <section class="min-h-80 p-5p grid grid-cols-4">
 
     <div class="col-span-1">
-            <h2 class="uppercase font-serif text-lg"> Explore </h2>
+            <h2 class="text-2xl font-serif mb-8 text-[2rem] uppercase"> Explore </h2>
             {% for item in page.members-content %}
-            <a href="#{{item.title | slugify }}" class="block"> {{item.title}}</a>
+            <a href="#{{item.title | slugify }}" class="block text-sm font-sans-serif leading-[1.8]"> {{item.title}}</a>
             {% endfor %}
 
     </div> 
