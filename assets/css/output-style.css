@@ -969,11 +969,11 @@ video {
 .h-full {
   height: 100%;
 }
+.min-h-50 {
+  min-height: 50vh;
+}
 .min-h-60 {
   min-height: 60vh;
-}
-.min-h-80 {
-  min-height: 80vh;
 }
 .min-h-\[25vh\] {
   min-height: 25vh;
@@ -984,8 +984,8 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
-.min-h-50 {
-  min-height: 50vh;
+.min-h-80 {
+  min-height: 80vh;
 }
 .w-0 {
   width: 0px;
@@ -1417,51 +1417,71 @@ body {
 
 /* -------------- Member Space Styling ----------------------- */
 
-.MemberSpaceWidgetInternal__Button_root {
-    display: none;
-  }
-
-.hover\:bg-zinc-100:hover {
+#memberspace-login-form input {
+  border: 2px solid blue;
+ }
+ 
+ #memberspace-login-form label {
+     border: 2px solid yellow;
+ }
+ 
+ /* Forgot Email / forgot password text */
+ #memberspace-login-form .MemberSpaceWidgetInternal__InputWrapper_labelRight {
+     color: green;
+ }
+ 
+ 
+ #memberspace-login-form .MemberSpaceWidgetInternal__Button_variant-primary {
+     color: red;
+ }
+ 
+ #memberspace-login-form .MemberSpaceWidgetInternal__Button_variant-secondary {
+     color: blue;
+ }
+  
+ .MemberSpaceWidgetInternal__BrandedInterface_footer {display: none; }
+  
+ .hover\:bg-zinc-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity));
 }
-
-.hover\:bg-zinc-200:hover {
+  
+ .hover\:bg-zinc-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }
-
-.hover\:text-rose-500:hover {
+  
+ .hover\:text-rose-500:hover {
   --tw-text-opacity: 1;
   color: rgb(244 63 94 / var(--tw-text-opacity));
 }
-
-.hover\:text-rose-600:hover {
+  
+ .hover\:text-rose-600:hover {
   --tw-text-opacity: 1;
   color: rgb(225 29 72 / var(--tw-text-opacity));
 }
-
-.group:hover .group-hover\:w-12 {
+  
+ .group:hover .group-hover\:w-12 {
   width: 3rem;
 }
-
-.group:hover .group-hover\:border-rose-400 {
+  
+ .group:hover .group-hover\:border-rose-400 {
   --tw-border-opacity: 1;
   border-color: rgb(251 113 133 / var(--tw-border-opacity));
 }
-
-.group:hover .group-hover\:grayscale {
+  
+ .group:hover .group-hover\:grayscale {
   --tw-grayscale: grayscale(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-
-@media not all and (min-width: 640px) {
+  
+ @media not all and (min-width: 640px) {
   .max-sm\:hidden {
     display: none;
   }
 }
-
-@media (min-width: 640px) {
+  
+ @media (min-width: 640px) {
   .sm\:col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -1494,8 +1514,8 @@ body {
     text-align: center;
   }
 }
-
-@media (min-width: 768px) {
+  
+ @media (min-width: 768px) {
   .md\:col-span-3 {
     grid-column: span 3 / span 3;
   }
@@ -1522,8 +1542,8 @@ body {
     overflow-x: auto;
   }
 }
-
-@media (min-width: 1024px) {
+  
+ @media (min-width: 1024px) {
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
