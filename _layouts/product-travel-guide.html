@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<!-- Section I / Product Intro -->
+
+<section class="grid grid-cols-2 items-end bg-stone-200 py-2">
+    <div class="col-span-1 p-20">
+        <h1 class="font-serif text-[3rem] mb-2"> {{page.title}} </h1>
+        <h2 class="uppercase font-sans-serif mb-2"> {{page.subtitle}} </h2>
+        <p class="mb-5"> {{page.description}} </p>
+        <a class="bg-black py-3 px-5 text-white uppercase" href="#"> Buy now </a>
+    </div>
+    <div class="col-span-1">
+    <img class="aspect-square object-cover" src="{{page.featured-image}}" alt="desert">
+    </div>
+</section>
+
+<!-- Section II / Before & After -->
+
+
+
+
+<section class="p-10p">
+    <h2 class="font-serif text-[3rem] mb-2 uppercase text-center"> What's inside </h2>
+
+    {% include gallery-images.html %}
+
+    <!-- <div class="min-h-screen" style="background-image: url('{{page.featured-image}}')"></div>
+    <div class="grid grid-cols-6 min-h-[25vh]">
+        <div class="col-span-1" style="background-image: url('{{page.featured-image}}')"> </div>
+        <div class="col-span-1" style="background-image: url('{{page.featured-image}}')"> </div>
+        <div class="col-span-1" style="background-image: url('{{page.featured-image}}')"> </div>
+        <div class="col-span-1" style="background-image: url('{{page.featured-image}}')"> </div>
+        <div class="col-span-1" style="background-image: url('{{page.featured-image}}')"> </div>
+        <div class="col-span-1" style="background-image: url('{{page.featured-image}}')"> </div>
+    </div> -->
+</section>
+
+
+
+<!-- FAQ -->
+<section class="bg-stone-200 grid grid-cols-6 px-5p py-[6rem] gap-7">
+    <div class="grid col-span-4"> 
+            <h2 class="border-b-2 border-black text-2xl font-serif pb-8 text-[2rem] uppercase">Table of contents</h2>
+             {% for item in site.data.guide-settings.content-table %}
+            <div class="border-b-2 border-black py-3" x-data="{ open: false }">
+                <button class="flex w-full justify-between" @click="open = ! open">
+                    <h3 class="uppercase font-sans-serif">{{item.destination}}</h3>
+                    <span> Top 10 Places to go </span>
+                </button>
+            <div x-show="open" @click.outside="open = false"><p class="pb-3">{{item.top-10}}</p></div>
+            </div>
+            
+            {% endfor %}
+    </div>
+    <div class="grid col-span-2 pl-4">
+        <h2 class="text-2xl font-serif mb-8 text-[2rem] uppercase"> What's included </h2>
+            <ul class="leading-[1.8]"> {{site.data.guide-settings.instructions.description_html}} </ul>
+            {{site.data.guide-settings.instructions_html}}
+
+    </div>
+    
+</section>
+
+<!-- Related -->
+
+{% include related-products.html %}

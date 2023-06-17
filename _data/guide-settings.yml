@@ -1,0 +1,23 @@
+instructions:
+  heading: How to use your presets
+  description_html: >-
+    - lorem Ipsum aute do minim nulla est <br>
+    - laboris nostrud.Adipisicing magna <br>
+    - n nisi aute sint occaecat et non <br> 
+    - psum dolore duis sunt. Mollit Lorem <br> 
+    - duis minim excepteur elit minim do <br>
+    - orem Ipsum aute do minim nulla est <br>
+    - ipsum anim qui laboris nostrud <br>
+    - Adipisicing magna consectetur <br>
+    - n nisi aute sint occaecat et non <br> 
+  presets-instructions-vimeo-id: 663318015
+before-and-after-description_html: lorem Ipsum aute do minim nulla est ipsum anim qui laboris nostrud.Adipisicing magna consectetur in nisi aute sint occaecat et non deserunt. Aliqua est ipsum dolore duis sunt. Mollit Lorem aliquip ad duis minim excepteur elit minim do eiusmod quis. lorem Ipsum aute do minim nulla est ipsum anim qui laboris nostrud.Adipisicing magna consectetur in nisi aute sint occaecat et non deserunt. Aliqua est ipsum dolore duis sunt. Mollit Lorem aliquip ad duis minim excepteur elit minim do eiusmod quis.
+content-table:
+  - destination: Europe
+    top-10: Fugiat pariatur duis mollit elit labore ea consectetur Lorem sint ullamco adipisicing.
+  - destination: Australia
+    top-10: Fugiat pariatur duis mollit elit labore ea consectetur Lorem sint ullamco adipisicing.o
+  - destination: Asia
+    top-10: Fugiat pariatur duis mollit elit labore ea consectetur Lorem sint ullamco adipisicing.
+  - destination: America
+    top-10: Fugiat pariatur duis mollit elit labore ea consectetur Lorem sint ullamco adipisicing.
