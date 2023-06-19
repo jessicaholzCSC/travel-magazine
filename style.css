@@ -41,6 +41,10 @@ body {
     font-weight: 300;
 }
 
+.filter .active {
+    @apply uppercase text-rose-600;
+}
+
 
 
 /* -------------- Member Space Styling ----------------------- */
