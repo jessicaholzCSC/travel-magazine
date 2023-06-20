@@ -53,14 +53,14 @@ seo:
 <section class="grid sm:grid-cols-2 p-[5rem] bg-[#edeceb]">
   <div class="sm:w-[85%] pb-[50%] sm:min-h-70 bg-cover bg-center bg-[url('{{page.text_blurbs.image.image_path | default: page.featured_image}}')]"> </div>
   <div class="py-15p">
-    <h2 class="font-serif text-[3rem] sm:w-[30rem] sm:-ml-[20vw] leading-[1.07] sm:text-center py-3 mb-8 sm:bg-[#d5d1cd] editable">
+    <h2 class="font-serif text-[3rem] sm:w-[30rem] sm:-ml-[20vw] leading-[1.07] sm:text-center py-3 mb-8 sm:bg-[#d5d1cd]">
       {{ page.text_blurbs.heading }}
     </h2>
     <!-- need to put text in block -->
-    <p class="text-sm leading-[1.8] pb-[1.5rem] editable"> 
+    <p class="text-sm leading-[1.8] pb-[1.5rem]"> 
       {{ page.text_blurbs.description }} 
     </p>
-    <a class="underline uppercase font-serif text-xl tracking-wid editable" href="{{ page.text_blurbs.button.url }} ">
+    <a class="underline uppercase font-serif text-xl tracking-wide" href="{{ page.text_blurbs.button.url }} ">
       {{ page.text_blurbs.button.text }}
     </a>
   </div>
@@ -93,7 +93,7 @@ seo:
 <section class="p-5p grid grid-cols-5 gap-5">
 
   <div class="col-span-full">
-    <h2 class="text-4xl uppercase text-center mb-8 font-serif tracking-wider"> Upcoming Travel Destinations </h2>
+    <h2 class="text-4xl uppercase text-center mb-8 font-serif tracking-wider editable"> Upcoming Travel Destinations </h2>
   </div>
 
   <div class="col-span-3 pr-10 pt-[6rem] pl-[0.5rem]">
